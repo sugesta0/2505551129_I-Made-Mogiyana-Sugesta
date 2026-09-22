@@ -1,0 +1,642 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>CV - I Made Mogiyana Sugesta</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-rows: auto 1fr auto;
+
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+
+            background-color: #1565c0;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+        }
+
+        header p {
+            margin: 5px;
+        }
+
+        aside {
+            grid-area: sidebar;
+
+            background-color: #0d47a1;
+
+            padding: 25px;
+        }
+
+        aside h3 {
+            color: white;
+
+            text-align: center;
+
+            margin-top: 0;
+
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px;
+
+            margin-bottom: 5px;
+
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #1976d2;
+        }
+
+        main {
+            grid-area: content;
+
+            padding: 30px;
+        }
+
+        .profile-card {
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .profile img {
+            width: 160px;
+
+            height: 160px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #1565c0;
+        }
+
+        .profile h2 {
+            color: #1565c0;
+
+            margin-top: 0;
+        }
+
+        .profile h3 {
+            color: #555;
+        }
+
+        .content-flex {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            align-items: stretch;
+        }
+
+        .card {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            flex: 1 1 45%;
+        }
+
+        .card h2 {
+            margin-top: 0;
+
+            color: #1565c0;
+
+            border-bottom: 2px solid #1565c0;
+
+            padding-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #1565c0;
+
+            color: white;
+
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+
+            border: 1px solid #ccc;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f7ff;
+        }
+
+        a {
+            color: #1565c0;
+        }
+
+        form input,
+        form select {
+            padding: 8px;
+
+            width: 100%;
+
+            margin-top: 5px;
+
+            border: 1px solid #aaa;
+
+            border-radius: 5px;
+        }
+
+        form input[type="submit"],
+        form input[type="reset"] {
+            width: auto;
+
+            padding: 10px 20px;
+
+            cursor: pointer;
+
+            margin-right: 5px;
+
+            background-color: #1565c0;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
+            background-color: #0d47a1;
+        }
+
+        footer {
+            grid-area: footer;
+
+            background-color: #0d47a1;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .container {
+                grid-template-columns: 1fr;
+
+                grid-template-rows: auto auto 1fr auto;
+
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+            }
+
+            aside {
+                text-align: center;
+            }
+
+            aside a {
+                display: inline-block;
+
+                margin: 3px;
+            }
+
+            .profile {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>Curriculum Vitae</h1>
+
+        <p>I Made Mogiyana Sugesta</p>
+
+        <p>Mahasiswa Teknologi Informasi</p>
+
+    </header>
+
+    <aside>
+
+        <h3>MENU</h3>
+
+        <a href="#about">About Me</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#pengalaman">Pengalaman</a>
+
+        <a href="#organisasi">Organisasi</a>
+
+        <a href="#kontak">Kontak</a>
+
+        <a href="#form">Formulir Kontak</a>
+
+    </aside>
+
+    <main>
+
+
+        <!-- PROFILE -->
+
+        <section class="profile-card">
+
+            <div class="profile">
+
+                <img src="foto.jpg"
+                     alt="Foto I Made Mogiyana Sugesta">
+
+                <div>
+
+                    <h2>I Made Mogiyana Sugesta</h2>
+
+                    <h3>Mahasiswa Teknologi Informasi</h3>
+
+                    <b>
+                        yanayana0ogi@gmail.com |
+                        @gesstttaaa |
+                        Bali, Indonesia
+                    </b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="content-flex">
+
+            <section class="card" id="about">
+
+                <h2>About Me</h2>
+
+                <p>
+                    Saya adalah mahasiswa Teknologi Informasi
+                    yang memiliki ketertarikan besar pada dunia
+                    desain grafis dan seni visual. Saya senang
+                    mengembangkan ide kreatif melalui gambar dan
+                    desain, serta terus berusaha meningkatkan
+                    kemampuan saya dalam menciptakan karya yang
+                    menarik dan inovatif.
+                </p>
+
+            </section>
+
+            <section class="card" id="education">
+
+                <h2>Education</h2>
+
+                <ul>
+
+                    <li>
+                        SMA Negeri 1 Bangli
+                    </li>
+
+                    <li>
+                        Universitas Udayana -
+                        Teknologi Informasi
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="card" id="pengalaman">
+
+                <h2>Pengalaman</h2>
+
+                <h3>
+                    Juara 1 Infografis Universitas Bengkulu
+                </h3>
+
+                <p>
+                    Meraih juara 1 dalam kompetisi infografis
+                    yang diselenggarakan oleh Universitas Bengkulu.
+                </p>
+
+
+                <h3>
+                    Juara Harapan 2 Lomba UI/UX Indoneris
+                </h3>
+
+                <p>
+                    Meraih juara harapan 2 dalam kompetisi
+                    desain UI/UX.
+                </p>
+
+            </section>
+
+            <section class="card" id="organisasi">
+
+                <h2>Pengalaman Organisasi</h2>
+
+                <table>
+
+                    <tr>
+
+                        <th>Organisasi</th>
+
+                        <th>Jabatan</th>
+
+                        <th>Periode</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Forum Anak Daerah Kabupaten Bangli
+                        </td>
+
+                        <td>
+                            Koordinator Publikasi & Dokumentasi
+                        </td>
+
+                        <td>
+                            2022–2024
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Himpunan Mahasiswa Teknologi Informasi (HMTI)
+                        </td>
+
+                        <td>
+                            Anggota Sie Publikasi & Dokumentasi
+                        </td>
+
+                        <td>
+                            Saat ini
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section class="card" id="kontak">
+
+                <h2>Kontak</h2>
+
+                <p>
+
+                    Email :
+
+                    <a href="mailto:yanayana0ogi@gmail.com">
+                        yanayana0ogi@gmail.com
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    Instagram :
+
+                    <a href="https://instagram.com/gesstttaaa"
+                       target="_blank">
+
+                        @gesstttaaa
+
+                    </a>
+
+                </p>
+
+            </section>
+
+            <section class="card" id="form">
+
+                <h2>Formulir Kontak</h2>
+
+                <form>
+
+                    <label>Nama:</label>
+
+                    <br>
+
+                    <input
+                        type="text"
+                        name="nama"
+                        placeholder="Masukkan nama"
+                    >
+
+                    <br><br>
+
+
+                    <label>Alamat Email:</label>
+
+                    <br>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Masukkan email"
+                    >
+
+                    <br><br>
+
+
+                    <label>Password:</label>
+
+                    <br>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Masukkan password"
+                    >
+
+                    <br><br>
+
+
+                    <label>Hobi:</label>
+
+                    <br>
+
+                    <select name="hobi">
+
+                        <option value="">
+                            -- Pilih Hobi --
+                        </option>
+
+                        <option value="desain">
+                            Desain Grafis
+                        </option>
+
+                        <option value="fotografi">
+                            Fotografi
+                        </option>
+
+                        <option value="menggambar">
+                            Menggambar
+                        </option>
+
+                        <option value="musik">
+                            Musik
+                        </option>
+
+                        <option value="olahraga">
+                            Olahraga
+                        </option>
+
+                    </select>
+
+                    <br><br>
+
+
+                    <label>
+                        No. Telepon / Alamat:
+                    </label>
+
+                    <br>
+
+                    <input
+                        type="text"
+                        name="kontak"
+                        placeholder="Masukkan no. telepon atau alamat"
+                    >
+
+                    <br><br>
+
+
+                    <input
+                        type="submit"
+                        value="Kirim"
+                    >
+
+                    <input
+                        type="reset"
+                        value="Reset"
+                    >
+
+                </form>
+
+            </section>
+
+
+        </div>
+
+
+        <br>
+
+
+        <p>
+            <a href="#">
+                Kembali ke Atas
+            </a>
+        </p>
+
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 I Made Mogiyana Sugesta
+        </p>
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>
+```
